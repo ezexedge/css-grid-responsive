@@ -7,12 +7,20 @@
         grid-template-rows: repeat(6,1fr);
         grid-template-columns: repeat(6,1fr);
         align-items: center;
+        @media only screen and (max-width: $bg-medium){
+            grid-column: 1 / -1;
+           
+        }
     }
     &_img--1{
         width: 100%;
         grid-row:  2/6;
         grid-column: 2/6;
         box-shadow: 0 2rem 5rem rgba(#000, .8);
+        @media only screen and (max-width: $bg-medium){
+            grid-row: 2 / 5;
+           
+        }
     }
     &_img--2{
         width: 110%;
@@ -20,14 +28,19 @@
         grid-column: 4/7;
         z-index: 2;
         box-shadow: 0 2rem 5rem rgba(#000, .7);
+        @media only screen and (max-width: $bg-medium){
+            grid-column: 3 / 6;
+           
+        }
 
     }
 
     &__content{
+        
         background-color: $color-grey-light-1;
         grid-column: col-start 5 / full-end;
         padding: 6rem 8vw;
-
+      
         /*  opcion con flexbox
         display:flex;
         flex-direction: column;
@@ -36,6 +49,11 @@
     display: grid;
     align-items: center;
     justify-items: start;
+    @media only screen and (max-width: $bg-medium){
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+    }
+
     }
     &__text{
       font-size: 1.5rem;
